@@ -1,0 +1,145 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/gradientSquare"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/progressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="239dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/progress2_2" />
+
+    <TextView
+        android:id="@+id/questionInvestorType"
+        android:layout_width="0dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="43dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Kamu tipe investor seperti apa?"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionType1"
+        app:layout_constraintEnd_toEndOf="@+id/investorTypeOption1"
+        app:layout_constraintStart_toStartOf="@+id/investorTypeOption1"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2" />
+
+    <RadioButton
+        android:id="@+id/investorTypeOption1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Private Investor"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionType1"
+        app:layout_constraintEnd_toEndOf="@+id/investorTypeOption2"
+        app:layout_constraintStart_toStartOf="@+id/investorTypeOption2"
+        app:layout_constraintTop_toBottomOf="@+id/questionInvestorType" />
+
+    <TextView
+        android:id="@+id/descriptionType1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="306dp"
+        android:fontFamily="@font/poppins"
+        android:text="Investor Informal/Angel Investor"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/investorTypeOption1" />
+
+    <RadioButton
+        android:id="@+id/investorTypeOption2"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Institutional Investor"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionType2"
+        app:layout_constraintEnd_toEndOf="@+id/investorTypeOption3"
+        app:layout_constraintStart_toStartOf="@+id/progressBar2"
+        app:layout_constraintTop_toTopOf="@+id/descriptionType1" />
+
+    <TextView
+        android:id="@+id/descriptionType2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/poppins"
+        android:text="VC/Corporate/Familly Office"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/investorTypeOption3"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionType1" />
+
+    <RadioButton
+        android:id="@+id/investorTypeOption3"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Other"
+        app:layout_constraintBottom_toTopOf="@+id/editTextOption3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionType2" />
+
+    <EditText
+        android:id="@+id/editTextOption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Isi sesuai dengan tipe kamu"
+        android:inputType="text"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/investorTypeOption3"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionType2" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#3CA7A3"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Lanjut"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/previous_button_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

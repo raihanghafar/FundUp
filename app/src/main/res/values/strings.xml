@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FundUp</string>
+    <string name="default_web_client_id">535343842582-utf5i546kv36gq3lo7062ic58u8fqsj2.apps.googleusercontent.com</string>
+    <string name="splash_screen">FundUp</string>
+    <string-array name="target_array">
+        <item>Pilih</item>
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+    </string-array>
+    <string-array name="developmental_array">
+        <item>Pilih</item>
+        <item>Option A</item>
+        <item>Option B</item>
+        <item>Option C</item>
+    </string-array>
+    <string-array name="industry_options">
+        <item>Pilih</item>
+        <item>Technology</item>
+        <item>Healthcare</item>
+        <item>Finance</item>
+    </string-array>
+    <string-array name="technology_options">
+        <item>Artificial Intelligence</item>
+        <item>Blockchain</item>
+        <item>Internet of Things</item>
+    </string-array>
+</resources>
