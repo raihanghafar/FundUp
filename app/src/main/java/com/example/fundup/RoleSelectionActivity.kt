@@ -2,7 +2,6 @@ package com.example.fundup
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -22,7 +21,6 @@ class RoleSelectionActivity : AppCompatActivity() {
 
         ceoButton.setOnClickListener {
             val intent = Intent(this, CEOActivity::class.java)
-            intent.putExtra("currentQuestionIndex", 0) // Set the current question index to 0
             startActivity(intent)
         }
     }

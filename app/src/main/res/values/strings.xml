@@ -4,25 +4,32 @@
     <string name="splash_screen">FundUp</string>
     <string-array name="target_array">
         <item>Pilih</item>
-        <item>Option 1</item>
-        <item>Option 2</item>
-        <item>Option 3</item>
+        <item>Business to Business (B2B)</item>
+        <item>Business to Consumers (B2C)</item>
+        <item>Consumer to Consumers (C2C)</item>
+        <item>Business to Government (B2G)</item>
+        <item>Government to Consumers (G2C)</item>
+        <item>Government to Business (G2B)</item>
     </string-array>
     <string-array name="developmental_array">
         <item>Pilih</item>
-        <item>Option A</item>
-        <item>Option B</item>
-        <item>Option C</item>
+        <item>Pre-Startup/RnD</item>
+        <item>MVP/prototype</item>
+        <item>Early Customers and Iteration</item>
+        <item>Product Market Fit and Monetization</item>
+        <item>Growth</item>
     </string-array>
     <string-array name="industry_options">
         <item>Pilih</item>
-        <item>Technology</item>
-        <item>Healthcare</item>
-        <item>Finance</item>
-    </string-array>
-    <string-array name="technology_options">
-        <item>Artificial Intelligence</item>
-        <item>Blockchain</item>
-        <item>Internet of Things</item>
+        <item>E-commerce</item>
+        <item>Fintech</item>
+        <item>Transportasi dan Logistik</item>
+        <item>Pendidikan Online</item>
+        <item>Kesehatan Digital</item>
+        <item>Travel dan Pariwisata</item>
+        <item>Agroteknologi</item>
+        <item>Energi Terbarukan</item>
+        <item>Makanan dan Minuman</item>
+        <item>Kreatif dan Media digital</item>
     </string-array>
 </resources>

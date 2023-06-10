@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "535343842582",
-    "project_id": "loginwith-6c76a",
-    "storage_bucket": "loginwith-6c76a.appspot.com"
+    "project_number": "3474449212",
+    "project_id": "fundup-387016",
+    "storage_bucket": "fundup-387016.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:535343842582:android:23c9c96e57db42c80f7c37",
+        "mobilesdk_app_id": "1:3474449212:android:6dbd923bb4d84176f47439",
         "android_client_info": {
-          "package_name": "com.example.fundup"
+          "package_name": "com.capstone.fundup"
         }
       },
       "oauth_client": [
         {
-          "client_id": "535343842582-uqv97gq75houjosshofqdcfbet64n34l.apps.googleusercontent.com",
+          "client_id": "3474449212-g1fkjbr07mlee77t8q5lrh2b3qjc4uqb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.fundup",
+            "package_name": "com.capstone.fundup",
             "certificate_hash": "ecc779d8d2de1972c4517d2c38abb5ecc955a2e9"
           }
         },
         {
-          "client_id": "535343842582-s4naf6q4r80db73iaiip8jfkgmq250lk.apps.googleusercontent.com",
+          "client_id": "3474449212-ovap9ah8b9vvun077ilnqr4mou9h6tqj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDAwP-wPd9LlwY36gBnOWA_xTDqGkc98cU"
+          "current_key": "AIzaSyBv01bFI3K6vJt6jqIctCToOBLuPCSztpc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "535343842582-q1di2f3dk3i811kreghnm749hu4fi646.apps.googleusercontent.com",
+              "client_id": "3474449212-2l56jjgm2ed44pp16ikt2krffhkjfoa9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -44,35 +44,35 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:535343842582:android:ab4d0fa8e3c8e2c20f7c37",
+        "mobilesdk_app_id": "1:3474449212:android:df3cc5990314095af47439",
         "android_client_info": {
-          "package_name": "com.example.loginwithgoogle"
+          "package_name": "com.example.fundup"
         }
       },
       "oauth_client": [
         {
-          "client_id": "535343842582-utf5i546kv36gq3lo7062ic58u8fqsj2.apps.googleusercontent.com",
+          "client_id": "3474449212-u9cjngg7dj0jaqcphp1toifjja4d001s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.loginwithgoogle",
+            "package_name": "com.example.fundup",
             "certificate_hash": "ecc779d8d2de1972c4517d2c38abb5ecc955a2e9"
           }
         },
         {
-          "client_id": "535343842582-s4naf6q4r80db73iaiip8jfkgmq250lk.apps.googleusercontent.com",
+          "client_id": "3474449212-ovap9ah8b9vvun077ilnqr4mou9h6tqj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDAwP-wPd9LlwY36gBnOWA_xTDqGkc98cU"
+          "current_key": "AIzaSyBv01bFI3K6vJt6jqIctCToOBLuPCSztpc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "535343842582-q1di2f3dk3i811kreghnm749hu4fi646.apps.googleusercontent.com",
+              "client_id": "3474449212-2l56jjgm2ed44pp16ikt2krffhkjfoa9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
