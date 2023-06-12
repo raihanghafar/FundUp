@@ -42,6 +42,10 @@ class CEOActivity : AppCompatActivity() {
         loadQuestionPage()
     }
 
+    override fun onBackPressed() {
+        handlePreviousButtonClick()
+    }
+
     private fun loadQuestionPage() {
         if (currentQuestionIndex < questionPages.size) {
             setContentView(questionPages[currentQuestionIndex]) // Change the layout file

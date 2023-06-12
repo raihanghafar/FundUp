@@ -72,6 +72,10 @@ class InvestorActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        handlePreviousButtonClick()
+    }
+
     private fun handlePreviousButtonClick() {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--
