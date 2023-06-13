@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -11,9 +12,12 @@ import android.widget.ImageButton
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class CEOActivity : AppCompatActivity() {
+
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     private val questionPages = listOf(
         R.layout.activity_ceo_question1,
@@ -115,54 +119,74 @@ class CEOActivity : AppCompatActivity() {
             currentQuestionIndex++
             loadQuestionPage()
         } else {
-            // Retrieve the values from SharedPreferences
-            val ceoNameValue = sharedPreferences.getString("ceoName0", null)
-            val ceoNikValue = sharedPreferences.getString("ceoNik0", null)
-            val ceoEmailValue = sharedPreferences.getString("ceoEmail0", null)
-            val startupNameValue = sharedPreferences.getString("startupName0", null)
-            val startupWebsiteValue = sharedPreferences.getString("startupWebsite0", null)
-            val targetValue = sharedPreferences.getString("target0", null)
-            val developmentalLevelValue = sharedPreferences.getString("developmentalLevel0", null)
-            val industryValue = sharedPreferences.getString("industry0", null)
+            // Retrieve the user ID from FirebaseAuth
+            val userID = auth.currentUser?.uid
 
-            // Create a HashMap with the field names and their corresponding values
-            val data = hashMapOf<String, Any?>()
+            if (userID != null) {
+                // Create a HashMap with the field names and their corresponding values
+                val data = hashMapOf<String, Any?>()
 
-            // Add non-null values to the data HashMap
-            ceoNameValue?.let { data["ceoName"] = it }
-            ceoNikValue?.let { data["ceoNik"] = it }
-            ceoEmailValue?.let { data["ceoEmail"] = it }
-            startupNameValue?.let { data["startupName"] = it }
-            startupWebsiteValue?.let { data["startupWebsite"] = it }
-            targetValue?.let { data["target"] = it }
-            developmentalLevelValue?.let { data["developmentalLevel"] = it }
-            industryValue?.let { data["industry"] = it }
+                // Retrieve the values from SharedPreferences using the correct keys
+                for (i in 0 until questionPages.size) {
+                    val ceoNameValue = sharedPreferences.getString("ceoName$i", null)
+                    val ceoNikValue = sharedPreferences.getString("ceoNik$i", null)
+                    val ceoEmailValue = sharedPreferences.getString("ceoEmail$i", null)
+                    val startupNameValue = sharedPreferences.getString("startupName$i", null)
+                    val startupWebsiteValue = sharedPreferences.getString("startupWebsite$i", null)
+                    val targetValue = sharedPreferences.getString("target$i", null)
+                    val developmentalLevelValue = sharedPreferences.getString("developmentalLevel$i", null)
+                    val industryValue = sharedPreferences.getString("industry$i", null)
 
-            // Save the entered values to Firestore
-            db.collection("ceoData")
-                .add(data)
-                .addOnSuccessListener { documentReference ->
-                    Toast.makeText(
-                        this,
-                        "Data saved successfully! Document ID: ${documentReference.id}",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                .addOnFailureListener { e ->
-                    Toast.makeText(
-                        this,
-                        "Error saving data. Please try again. Error: ${e.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    // Add non-null values to the data HashMap
+                    ceoNameValue?.let { data["ceoName"] = it }
+                    ceoNikValue?.let { data["ceoNik"] = it }
+                    ceoEmailValue?.let { data["ceoEmail"] = it }
+                    startupNameValue?.let { data["startupName"] = it }
+                    startupWebsiteValue?.let { data["startupWebsite"] = it }
+                    targetValue?.let { data["target"] = it }
+                    developmentalLevelValue?.let { data["developmentalLevel"] = it }
+                    industryValue?.let { data["industry"] = it }
+
+                    // Print the input data in the logcat
+                    Log.d("InputData", "CEO Name: $ceoNameValue")
+                    Log.d("InputData", "CEO NIK: $ceoNikValue")
+                    Log.d("InputData", "CEO Email: $ceoEmailValue")
+                    Log.d("InputData", "Startup Name: $startupNameValue")
+                    Log.d("InputData", "Startup Website: $startupWebsiteValue")
+                    Log.d("InputData", "Target: $targetValue")
+                    Log.d("InputData", "Developmental Level: $developmentalLevelValue")
+                    Log.d("InputData", "Industry: $industryValue")
                 }
 
-            val intent = Intent(this, RoleSelectionActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(intent)
-            finish()
+                // Save the entered values to Firestore with the user ID as the document ID
+                db.collection("ceoData")
+                    .document(userID)
+                    .set(data)
+                    .addOnSuccessListener {
+                        Toast.makeText(
+                            this,
+                            "Data saved successfully! Document ID: $userID",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(
+                            this,
+                            "Error saving data. Please try again. Error: ${e.message}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+
+                val intent = Intent(this, RoleSelectionActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+                finish()
+            } else {
+                // User is not logged in or user ID is null
+                // Handle the case accordingly
+            }
         }
     }
-
 
     private fun saveEnteredValues() {
         // Get the references to the views
@@ -185,7 +209,7 @@ class CEOActivity : AppCompatActivity() {
         val developmentalLevelValue = developmentalSpinner?.selectedItem?.toString()
         val industryValue = industrySpinner?.selectedItem?.toString()
 
-        // Save the entered values to SharedPreferences
+        // Save the entered values to SharedPreferences with the correct keys using dynamic index
         val editor = sharedPreferences.edit()
         editor.putString("ceoName$currentQuestionIndex", ceoNameValue)
         editor.putString("ceoNik$currentQuestionIndex", ceoNikValue)
