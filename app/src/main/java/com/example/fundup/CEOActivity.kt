@@ -128,24 +128,24 @@ class CEOActivity : AppCompatActivity() {
 
                 // Retrieve the values from SharedPreferences using the correct keys
                 for (i in 0 until questionPages.size) {
-                    val ceoNameValue = sharedPreferences.getString("ceoName$i", null)
-                    val ceoNikValue = sharedPreferences.getString("ceoNik$i", null)
-                    val ceoEmailValue = sharedPreferences.getString("ceoEmail$i", null)
-                    val startupNameValue = sharedPreferences.getString("startupName$i", null)
-                    val startupWebsiteValue = sharedPreferences.getString("startupWebsite$i", null)
-                    val targetValue = sharedPreferences.getString("target$i", null)
-                    val developmentalLevelValue = sharedPreferences.getString("developmentalLevel$i", null)
-                    val industryValue = sharedPreferences.getString("industry$i", null)
+                    val ceoNameValue = sharedPreferences.getString("nama_lengkap$i", null)
+                    val ceoNikValue = sharedPreferences.getString("nik_startup$i", null)
+                    val ceoEmailValue = sharedPreferences.getString("email_startup$i", null)
+                    val startupNameValue = sharedPreferences.getString("nama_perusahaan$i", null)
+                    val startupWebsiteValue = sharedPreferences.getString("website_perusahaan$i", null)
+                    val targetValue = sharedPreferences.getString("target_perusahaan$i", null)
+                    val developmentalLevelValue = sharedPreferences.getString("tingkat_perkembangan_perusahaan$i", null)
+                    val industryValue = sharedPreferences.getString("industri_startup$i", null)
 
                     // Add non-null values to the data HashMap
-                    ceoNameValue?.let { data["ceoName"] = it }
-                    ceoNikValue?.let { data["ceoNik"] = it }
-                    ceoEmailValue?.let { data["ceoEmail"] = it }
-                    startupNameValue?.let { data["startupName"] = it }
-                    startupWebsiteValue?.let { data["startupWebsite"] = it }
-                    targetValue?.let { data["target"] = it }
-                    developmentalLevelValue?.let { data["developmentalLevel"] = it }
-                    industryValue?.let { data["industry"] = it }
+                    ceoNameValue?.let { data["nama_lengkap"] = it }
+                    ceoNikValue?.let { data["nik_startup"] = it }
+                    ceoEmailValue?.let { data["email_startup"] = it }
+                    startupNameValue?.let { data["nama_perusahaan"] = it }
+                    startupWebsiteValue?.let { data["website_perusahaan"] = it }
+                    targetValue?.let { data["target_perusahaan"] = it }
+                    developmentalLevelValue?.let { data["tingkat_perkembangan_perusahaan"] = it }
+                    industryValue?.let { data["industri_startup"] = it }
 
                     // Print the input data in the logcat
                     Log.d("InputData", "CEO Name: $ceoNameValue")
@@ -159,7 +159,7 @@ class CEOActivity : AppCompatActivity() {
                 }
 
                 // Save the entered values to Firestore with the user ID as the document ID
-                db.collection("ceoData")
+                db.collection("startup")
                     .document(userID)
                     .set(data)
                     .addOnSuccessListener {
@@ -211,14 +211,14 @@ class CEOActivity : AppCompatActivity() {
 
         // Save the entered values to SharedPreferences with the correct keys using dynamic index
         val editor = sharedPreferences.edit()
-        editor.putString("ceoName$currentQuestionIndex", ceoNameValue)
-        editor.putString("ceoNik$currentQuestionIndex", ceoNikValue)
-        editor.putString("ceoEmail$currentQuestionIndex", ceoEmailValue)
-        editor.putString("startupName$currentQuestionIndex", startupNameValue)
-        editor.putString("startupWebsite$currentQuestionIndex", startupWebsiteValue)
-        editor.putString("target$currentQuestionIndex", targetValue)
-        editor.putString("developmentalLevel$currentQuestionIndex", developmentalLevelValue)
-        editor.putString("industry$currentQuestionIndex", industryValue)
+        editor.putString("nama_lengkap$currentQuestionIndex", ceoNameValue)
+        editor.putString("nik_startup$currentQuestionIndex", ceoNikValue)
+        editor.putString("email_startup$currentQuestionIndex", ceoEmailValue)
+        editor.putString("nama_perusahaan$currentQuestionIndex", startupNameValue)
+        editor.putString("website_perusahaan$currentQuestionIndex", startupWebsiteValue)
+        editor.putString("target_perusahaan$currentQuestionIndex", targetValue)
+        editor.putString("tingkat_perkembangan_perusahaan$currentQuestionIndex", developmentalLevelValue)
+        editor.putString("industri_startup$currentQuestionIndex", industryValue)
         editor.apply()
     }
 
@@ -234,16 +234,16 @@ class CEOActivity : AppCompatActivity() {
         val industrySpinner = findViewById<Spinner>(R.id.spinnerIndustry)
 
         // Load the entered values from SharedPreferences
-        val ceoNameValue = sharedPreferences.getString("ceoName$currentQuestionIndex", "")
-        val ceoNikValue = sharedPreferences.getString("ceoNik$currentQuestionIndex", "")
-        val ceoEmailValue = sharedPreferences.getString("ceoEmail$currentQuestionIndex", "")
-        val startupNameValue = sharedPreferences.getString("startupName$currentQuestionIndex", "")
+        val ceoNameValue = sharedPreferences.getString("nama_lengkap$currentQuestionIndex", "")
+        val ceoNikValue = sharedPreferences.getString("nik_startup$currentQuestionIndex", "")
+        val ceoEmailValue = sharedPreferences.getString("email_startup$currentQuestionIndex", "")
+        val startupNameValue = sharedPreferences.getString("nama_perusahaan$currentQuestionIndex", "")
         val startupWebsiteValue =
-            sharedPreferences.getString("startupWebsite$currentQuestionIndex", "")
-        val targetValue = sharedPreferences.getString("target$currentQuestionIndex", "")
+            sharedPreferences.getString("website_perusahaan$currentQuestionIndex", "")
+        val targetValue = sharedPreferences.getString("target_perusahaan$currentQuestionIndex", "")
         val developmentalLevelValue =
-            sharedPreferences.getString("developmentalLevel$currentQuestionIndex", "")
-        val industryValue = sharedPreferences.getString("industry$currentQuestionIndex", "")
+            sharedPreferences.getString("tingkat_perkembangan_perusahaan$currentQuestionIndex", "")
+        val industryValue = sharedPreferences.getString("industri_startup$currentQuestionIndex", "")
 
         // Set the entered values to the views
         ceoNameEditText?.setText(ceoNameValue)
