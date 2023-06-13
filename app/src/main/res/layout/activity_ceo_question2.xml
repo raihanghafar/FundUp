@@ -66,7 +66,7 @@
         android:textColor="#6D6D6D"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/websiteEditText"
+        app:layout_constraintEnd_toEndOf="@+id/startupWebsiteEditText"
         app:layout_constraintStart_toStartOf="@+id/descriptionStartupName"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,12 +94,12 @@
         android:fontFamily="@font/poppins"
         android:text="Cantumkan link website kamu untuk meyakinkan para investor!"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/websiteEditText"
+        app:layout_constraintBottom_toBottomOf="@+id/startupWebsiteEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startupNameEditText" />
 
     <EditText
-        android:id="@+id/websiteEditText"
+        android:id="@+id/startupWebsiteEditText"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginStart="22dp"
