@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import okhttp3.*
+import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.IOException
 
 class CEOActivity : AppCompatActivity() {
@@ -279,8 +280,12 @@ class CEOActivity : AppCompatActivity() {
         val url = "https://fundup-6pay5onqfa-et.a.run.app/startup"
 
         val client = OkHttpClient()
+
+        // Build the POST request without a request body
+        val requestBody = ByteArray(0).toRequestBody()
         val request = Request.Builder()
             .url(url)
+            .post(requestBody)
             .build()
 
         client.newCall(request).enqueue(object : Callback {
