@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import okhttp3.*
+import java.io.IOException
 
 class CEOActivity : AppCompatActivity() {
 
@@ -168,6 +170,8 @@ class CEOActivity : AppCompatActivity() {
                             "Data saved successfully! Document ID: $userID",
                             Toast.LENGTH_SHORT
                         ).show()
+
+                        callFlaskAPI()
                     }
                     .addOnFailureListener { e ->
                         Toast.makeText(
@@ -269,5 +273,40 @@ class CEOActivity : AppCompatActivity() {
             }
         }
         return 0
+    }
+
+    private fun callFlaskAPI() {
+        val url = "https://fundup-6pay5onqfa-et.a.run.app/startup"
+
+        val client = OkHttpClient()
+        val request = Request.Builder()
+            .url(url)
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                // Handle failure to call API
+                runOnUiThread {
+                    Toast.makeText(
+                        applicationContext,
+                        "Failed to call Flask API: ${e.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                // Handle API response
+                val responseBody = response.body?.string()
+
+                runOnUiThread {
+                    Toast.makeText(
+                        applicationContext,
+                        "Flask API response: $responseBody",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        })
     }
 }
