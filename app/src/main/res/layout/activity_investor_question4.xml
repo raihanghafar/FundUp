@@ -10,88 +10,97 @@
         android:layout_height="0dp"
         android:layout_marginBottom="17dp"
         android:background="@drawable/gradient_background"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar4"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/progressBar4"
+        android:id="@+id/progressBar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="239dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progress2_4" />
+        app:srcCompat="@drawable/progress2_6" />
 
     <TextView
-        android:id="@+id/questionFunds"
+        android:id="@+id/questionTarget"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="59dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Berapakah nilai investasi yang Anda rencanakan untuk startup (estimasi 12 bulan)?"
+        android:text="Target Industri"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerIndustry"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerIndustry"
+        app:layout_constraintStart_toStartOf="@+id/descriptionTarget"
+        app:layout_constraintTop_toBottomOf="@+id/gradientSquare" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup4"
-        android:layout_width="0dp"
-        android:layout_height="242dp"
+    <TextView
+        android:id="@+id/descriptionTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/previousButton"
-        app:layout_constraintEnd_toEndOf="@+id/questionFunds"
-        app:layout_constraintStart_toStartOf="parent">
+        android:fontFamily="@font/poppins"
+        android:text="Apa target dari perusaahan Anda?"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTarget" />
 
-        <RadioButton
-            android:id="@+id/fundsOption1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Kurang dari 300 Juta Rupiah"
-            android:textSize="14sp" />
+    <Spinner
+        android:id="@+id/spinnerIndustry"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@drawable/edittext_background"
+        android:entries="@array/industry_options"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/questionDevelopmental"
+        app:layout_constraintStart_toStartOf="@+id/descriptionTarget"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/fundsOption2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="300 Juta - 600 Juta Rupiah"
-            android:textSize="14sp" />
+    <TextView
+        android:id="@+id/questionDevelopmental"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="78dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Tingkat Perkembangan Startup"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerDevelopmental"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionDevelopmental"
+        app:layout_constraintStart_toStartOf="@+id/descriptionDevelopmental"
+        app:layout_constraintTop_toTopOf="@+id/descriptionTarget" />
 
-        <RadioButton
-            android:id="@+id/fundsOption3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="600 Juta - 900 Juta Rupiah"
-            android:textSize="14sp" />
+    <TextView
+        android:id="@+id/descriptionDevelopmental"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="39dp"
+        android:fontFamily="@font/poppins"
+        android:text="Sudah seberapa jauh perkembangan perusahaan anda?"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerDevelopmental"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerDevelopmental"
+        app:layout_constraintStart_toStartOf="@+id/spinnerDevelopmental"
+        app:layout_constraintTop_toTopOf="@+id/questionDevelopmental" />
 
-        <RadioButton
-            android:id="@+id/fundsOption4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Lebih dari 900 Juta Rupiah"
-            android:textSize="14sp" />
-
-        <RadioButton
-            android:id="@+id/fundsOption5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Saya belum siap berinvestasi"
-            android:textSize="14sp" />
-
-    </RadioGroup>
+    <Spinner
+        android:id="@+id/spinnerDevelopmental"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="212dp"
+        android:background="@drawable/edittext_background"
+        android:entries="@array/developmental_array"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar3"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/nextButton"

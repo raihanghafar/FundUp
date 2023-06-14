@@ -2,7 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-17dp">
 
     <ImageView
         android:id="@+id/gradientSquare"
@@ -10,76 +12,106 @@
         android:layout_height="0dp"
         android:layout_marginBottom="17dp"
         android:background="@drawable/gradient_background"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar5"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/progressBar5"
+        android:id="@+id/progressBar6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="239dp"
+        android:layout_marginBottom="241dp"
+        app:layout_constraintBottom_toTopOf="@+id/termsCheckbox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progress2_5" />
+        app:srcCompat="@drawable/progress2_6" />
 
     <TextView
-        android:id="@+id/questionStartupType"
+        android:id="@+id/terms"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="55dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Jenis startup apa yang ingin Anda investasikan?"
+        android:text="Syarat dan Ketentuan"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionTerms"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressBar6" />
+
+    <TextView
+        android:id="@+id/descriptionTerms"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="57dp"
+        android:fontFamily="@font/poppins"
+        android:text="Saya mengerti, mengetahui dan menyetujui bahwa aplikasi ini dibuat untuk membantu startup dan investor untuk saling berkolaborasi."
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionTerms3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar5" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar6" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup4"
+    <TextView
+        android:id="@+id/descriptionTerms2"
         android:layout_width="0dp"
-        android:layout_height="220dp"
-        android:layout_marginBottom="154dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="67dp"
+        android:fontFamily="@font/poppins"
+        android:text="Saya memahami bahwa informasi yang mempresentasikan diri saya, berasal dari saya sendiri."
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/termsCheckbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/descriptionTerms" />
+
+    <TextView
+        android:id="@+id/descriptionTerms3"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="241dp"
+        android:fontFamily="@font/poppins"
+        android:text="Saya mengerti dan mengkonfirmasi untuk mengetahui dan mempelajari setiap kesempatan sebelum akhirnya melakukan transaksi."
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/questionStartupType"
-        app:layout_constraintStart_toStartOf="@+id/questionStartupType">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <RadioButton
-            android:id="@+id/startupTypeOption1"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Startup yang memiliki dampak pada permasalahan di Indonesia"
-            android:textSize="14sp" />
-
-        <RadioButton
-            android:id="@+id/startupTypeOption2"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Startup yang memiliki dampak, namun tetap memperhatikan risk and return"
-            android:textSize="14sp" />
-
-        <RadioButton
-            android:id="@+id/startupTypeOption3"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Startup yang memiliki risk and return yang baik"
-            android:textSize="14sp" />
-
-    </RadioGroup>
+    <CheckBox
+        android:id="@+id/termsCheckbox"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="21dp"
+        android:checked="false"
+        android:fontFamily="@font/poppins"
+        android:text="Saya sudah membaca dan menyetuji syarat diatas"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionTerms3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTerms3" />
 
     <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#3CA7A3"
         android:fontFamily="@font/poppins_semibold"

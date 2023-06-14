@@ -32,4 +32,32 @@
         <item>Makanan dan Minuman</item>
         <item>Kreatif dan Media digital</item>
     </string-array>
+    <string-array name="investor_type_options">
+        <item>Pilih</item>
+        <item>Private Investor</item>
+        <item>Institutional Investor</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="investor_experience_options">
+        <item>Pilih</item>
+        <item>Belum pernah</item>
+        <item>1-3 Startup</item>
+        <item>4-6 Startup</item>
+        <item>7-10 Startup</item>
+        <item>Lebih dari 10 Startup</item>
+    </string-array>
+    <string-array name="investor_target_options">
+        <item>Pilih</item>
+        <item>Kurang dari 300 Juta Rupiah</item>
+        <item>300 Juta - 600 Juta Rupiah</item>
+        <item>600 Juta - 900 Juta Rupiah</item>
+        <item>Lebih dari 900 Juta Rupiah</item>
+        <item>Saya belum siap berinvestasi</item>
+    </string-array>
+    <string-array name="startup_type_options">
+        <item>Pilih</item>
+        <item>Startup yang memiliki dampak pada permasalahan di Indonesia</item>
+        <item>Startup yang memiliki dampak, namun tetap memperhatikan risk and return</item>
+        <item>Startup yang memiliki risk and return yang baik</item>
+    </string-array>
 </resources>
