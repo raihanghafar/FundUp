@@ -12,13 +12,13 @@
         android:layout_height="0dp"
         android:layout_marginBottom="17dp"
         android:background="@drawable/gradient_background"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar6"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/progressBar6"
+        android:id="@+id/progressBar5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/termsCheckbox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progress2_6" />
+        app:srcCompat="@drawable/progress_5" />
 
     <TextView
         android:id="@+id/terms"
@@ -41,9 +41,9 @@
         android:text="Syarat dan Ketentuan"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/descriptionTerms"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar6"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/progressBar6" />
+        app:layout_constraintTop_toTopOf="@+id/progressBar5" />
 
     <TextView
         android:id="@+id/descriptionTerms"
@@ -59,7 +59,7 @@
         app:layout_constraintBottom_toTopOf="@+id/descriptionTerms3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar6" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar5" />
 
     <TextView
         android:id="@+id/descriptionTerms2"

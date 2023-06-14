@@ -10,20 +10,20 @@
         android:layout_height="0dp"
         android:layout_marginBottom="17dp"
         android:background="@drawable/gradient_background"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/progressBar3"
+        android:id="@+id/progressBar4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="239dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progress2_6" />
+        app:srcCompat="@drawable/progress_4" />
 
     <TextView
         android:id="@+id/questionTarget"
@@ -99,7 +99,7 @@
         android:background="@drawable/edittext_background"
         android:entries="@array/developmental_array"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar3"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

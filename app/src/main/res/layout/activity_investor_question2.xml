@@ -10,20 +10,20 @@
         android:layout_height="0dp"
         android:layout_marginBottom="17dp"
         android:background="@drawable/gradient_background"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/progressBar3"
+        android:id="@+id/progressBar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="239dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progress_3" />
+        app:srcCompat="@drawable/progress_2" />
 
     <TextView
         android:id="@+id/investorTypeEditText"
@@ -36,9 +36,9 @@
         android:text="Kamu tipe investor seperti apa?"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerInvestorType"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar3"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
         app:layout_constraintStart_toStartOf="@+id/spinnerInvestorType"
-        app:layout_constraintTop_toTopOf="@+id/progressBar3" />
+        app:layout_constraintTop_toTopOf="@+id/progressBar2" />
 
     <Spinner
         android:id="@+id/spinnerInvestorType"
@@ -49,7 +49,7 @@
         android:background="@drawable/edittext_background"
         android:entries="@array/investor_type_options"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar3"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,7 +79,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/spinnerInvestorType"
         app:layout_constraintStart_toStartOf="@+id/spinnerInvestorType"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
 
     <Button
         android:id="@+id/nextButton"

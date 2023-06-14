@@ -23,7 +23,7 @@
         android:layout_marginTop="239dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progress2_1" />
+        app:srcCompat="@drawable/progress_1" />
 
     <TextView
         android:id="@+id/questionInvestorName"
