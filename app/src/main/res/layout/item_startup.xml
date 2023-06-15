@@ -13,10 +13,10 @@
     android:layout_marginBottom="4dp"
     card_view:cardCornerRadius="6dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="278dp"
-        android:orientation="horizontal">
+        android:layout_height="253dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/namaPerusahaanTextView"
@@ -25,10 +25,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/name_startup"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/emailStartupTextView"
@@ -36,115 +34,79 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/email"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/namaPerusahaanTextView" />
-
-        <RelativeLayout
-            android:id="@+id/group_57"
-            android:layout_width="38dp"
-            android:layout_height="33dp"
-            android:layout_marginStart="224dp"
-            android:background="@drawable/call"
-            app:layout_constraintStart_toEndOf="@id/emailStartupTextView"
-            app:layout_constraintTop_toBottomOf="@id/namaPerusahaanTextView" />
-
-        <TextView
-            android:id="@+id/targetperusahaan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="44dp"
-            android:text="@string/target_startup"
-            android:textAppearance="@style/tingkat_per"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/emailStartupTextView" />
-
-        <TextView
-            android:id="@+id/targetPerusahaanTextView"
-            android:layout_width="37dp"
-            android:layout_height="19dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/industri"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/targetperusahaan" />
-
-        <TextView
-            android:id="@+id/tingkat_per"
-            android:layout_width="197dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginBottom="140dp"
-            android:gravity="top"
-            android:text="@string/perkembangan"
-            android:textAppearance="@style/tingkat_per"
-            app:layout_constraintStart_toStartOf="@id/targetperusahaan"
-            card_view:layout_constraintBottom_toBottomOf="parent" />
-
-        <TextView
-            android:id="@+id/tingkatPerkembanganPerusahaanTextView"
-            android:layout_width="204dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="172dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/growth"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tingkat_per" />
+            android:textAppearance="@style/www_webinar" />
 
         <TextView
             android:id="@+id/nikStartupTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="72dp"
+            android:layout_marginStart="16dp"
             android:text="@string/tlfon"
-            android:textAppearance="@style/www_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tingkat_per" />
+            android:textAppearance="@style/www_text" />
 
+        <TextView
+            android:id="@+id/targetperusahaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/target_startup"
+            android:textAppearance="@style/tingkat_per" />
+
+        <TextView
+            android:id="@+id/targetPerusahaanTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/industri"
+            android:textAppearance="@style/www_webinar" />
+
+        <TextView
+            android:id="@+id/tingkat_per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/perkembangan"
+            android:textAppearance="@style/tingkat_per" />
+
+        <TextView
+            android:id="@+id/tingkatPerkembanganPerusahaanTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/growth"
+            android:textAppearance="@style/www_webinar" />
 
         <TextView
             android:id="@+id/namaLengkapTextView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="72dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
             android:text="Nama Founder"
-            android:textAppearance="@style/www_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/targetPerusahaanTextView" />
+            android:textAppearance="@style/www_text" />
 
-        <View
-            android:id="@+id/btn_2"
-            android:layout_width="178dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="172dp"
-            android:layout_marginTop="48dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/kustimasi"
-            android:text="digital"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tingkatPerkembanganPerusahaanTextView" />
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingTop="5dp">
 
-        <TextView
-            android:id="@+id/industriStartupTextView"
-            android:layout_width="67dp"
-            android:layout_height="28dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="240dp"
-            android:layout_marginTop="52dp"
-            android:gravity="top"
-            android:text="@string/distribusi"
-            android:textAppearance="@style/industri_st"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tingkatPerkembanganPerusahaanTextView" />
+            <TextView
+                android:id="@+id/industriStartupTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Digital"
+                android:textAlignment="center"
+                android:textColor="@color/teal_200"
+                android:textSize="10dp" /> <!-- Set the text color, e.g., white -->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -13,10 +13,10 @@
     android:layout_marginBottom="4dp"
     card_view:cardCornerRadius="6dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="259dp"
-        android:orientation="horizontal">
+        android:layout_height="282dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/namaLengkapTextView"
@@ -25,126 +25,97 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/nama"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/emailInvestorTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
             android:text="@string/email"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/namaLengkapTextView" />
-
-        <RelativeLayout
-            android:id="@+id/group_57"
-            android:layout_width="38dp"
-            android:layout_height="33dp"
-            android:layout_marginStart="228dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/call"
-            app:layout_constraintStart_toEndOf="@id/emailInvestorTextView"
-            app:layout_constraintTop_toBottomOf="@id/namaLengkapTextView" />
-
-        <TextView
-            android:id="@+id/typeinves"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
-            android:text="@string/type"
-            android:textAppearance="@style/tingkat_per"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/emailInvestorTextView" />
-
-        <TextView
-            android:id="@+id/tipeInvestorTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/jenis"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/typeinves" />
-
-        <TextView
-            android:id="@+id/targetinves"
-            android:layout_width="157dp"
-            android:layout_height="25dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="160dp"
-            android:layout_marginBottom="156dp"
-            android:gravity="top"
-            android:text="@string/target"
-            android:textAppearance="@style/tingkat_per"
-            app:layout_constraintStart_toStartOf="@id/typeinves"
-            card_view:layout_constraintBottom_toBottomOf="parent" />
-
-        <TextView
-            android:id="@+id/targetPerkembanganTextView"
-            android:layout_width="185dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="180dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/growth"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/targetinves" />
+            android:textAppearance="@style/www_webinar" />
 
         <TextView
             android:id="@+id/nikInvestorTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
             android:text="@string/tlfon"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/targetPerkembanganTextView" />
+            android:textAppearance="@style/www_text"/>
+
+        <TextView
+            android:id="@+id/typeinves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/type"
+            android:textAppearance="@style/tingkat_per" />
+
+        <TextView
+            android:id="@+id/tipeInvestorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/jenis"
+            android:textAppearance="@style/www_webinar" />
+
+        <TextView
+            android:id="@+id/targetinves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/target"
+            android:textAppearance="@style/tingkat_per" />
+
+        <TextView
+            android:id="@+id/targetPerkembanganTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/growth"
+            android:textAppearance="@style/www_webinar" />
+
+        <TextView
+            android:id="@+id/pengalamanInves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/pengalaman"
+            android:textAppearance="@style/tingkat_per" />
 
         <TextView
             android:id="@+id/pengalamanInvestasiTextView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="52dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
             android:text="@string/pengalaman"
-            android:textAppearance="@style/www_webinar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tipeInvestorTextView" />
+            android:textAppearance="@style/www_text" />
 
-        <View
-            android:id="@+id/rectangle_5"
-            android:layout_width="204dp"
-            android:layout_height="30.49dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="180dp"
-            android:layout_marginTop="4dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/kustimasi"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pengalamanInvestasiTextView" />
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingTop="5dp">
 
-        <TextView
-            android:id="@+id/targetIndustriTextView"
-            android:layout_width="67dp"
-            android:layout_height="28dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="256dp"
-            android:layout_marginTop="80dp"
-            android:gravity="top"
-            android:text="@string/distribusi"
-            android:textAppearance="@style/industri_st"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/targetPerkembanganTextView" />
+            <TextView
+                android:id="@+id/targetIndustriTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Digital"
+                android:textAlignment="center"
+                android:textColor="@color/teal_200"
+                android:textSize="10dp" /> <!-- Set the text color, e.g., white -->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
