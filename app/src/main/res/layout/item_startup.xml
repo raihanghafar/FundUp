@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/namaLengkapTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/nikStartupTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/emailStartupTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/industriStartupTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tingkatPerkembanganPerusahaanTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/namaPerusahaanTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/targetPerusahaanTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+</LinearLayout>

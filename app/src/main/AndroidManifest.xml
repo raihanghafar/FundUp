@@ -37,6 +37,15 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+        <activity
+            android:name=".HomepageInvestor"
+            android:exported="false" />
+        <activity
+            android:name=".HomepageStartup"
+            android:exported="false" />
+        <activity
+            android:name=".LoadingActivity"
+            android:exported="false" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
