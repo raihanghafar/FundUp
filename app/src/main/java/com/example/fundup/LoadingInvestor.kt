@@ -5,18 +5,18 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 
-class LoadingActivity : AppCompatActivity() {
+class LoadingInvestor : AppCompatActivity() {
 
     private val delayMillis: Long = 7000 // Adjust the delay time as needed
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loading)
+        setContentView(R.layout.loading_investor)
 
         // Simulate a delay to show the loading screen
         Handler().postDelayed({
             // Proceed to the next activity
-            val intent = Intent(this, HomepageStartup::class.java)
+            val intent = Intent(this, HomepageInvestor::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()

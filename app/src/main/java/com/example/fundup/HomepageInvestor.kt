@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class HomepageInvestor : AppCompatActivity() {
@@ -11,6 +12,7 @@ class HomepageInvestor : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: StartupAdapter
     private val startupDataList: MutableList<StartupData> = mutableListOf()
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +28,8 @@ class HomepageInvestor : AppCompatActivity() {
 
     private fun fetchDataFromFirestore() {
         val db = FirebaseFirestore.getInstance()
-        val inputId = "9CaiZ1UndOYiP9xJo4vDlfgN2Pq1"
+        val userID = auth.currentUser?.uid
+        val inputId = userID.toString()
 
         db.collection("startup_matches").document(inputId).get()
             .addOnSuccessListener { documentSnapshot ->

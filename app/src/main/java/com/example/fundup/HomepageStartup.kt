@@ -64,7 +64,7 @@ class HomepageStartup : AppCompatActivity() {
                                 investorDataList.add(investor)
                                 adapter.notifyDataSetChanged()
                             } else {
-                                println("No data found for Startup ID: $investorId")
+                                println("No data found for Investor ID: $investorId")
                             }
 
                             if (fetchCount == investorIdsMatches.size) {
@@ -72,12 +72,12 @@ class HomepageStartup : AppCompatActivity() {
                             }
                         }
                         .addOnFailureListener { exception ->
-                            println("Failed to fetch startup data: ${exception.message}")
+                            println("Failed to fetch investor data: ${exception.message}")
                         }
                 }
             }
             .addOnFailureListener { exception ->
-                println("Failed to fetch startup matches data: ${exception.message}")
+                println("Failed to fetch investor matches data: ${exception.message}")
             }
     }
 }

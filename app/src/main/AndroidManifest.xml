@@ -44,7 +44,7 @@
             android:name=".HomepageStartup"
             android:exported="false" />
         <activity
-            android:name=".LoadingActivity"
+            android:name=".LoadingStartup"
             android:exported="false" />
         <meta-data
             android:name="preloaded_fonts"

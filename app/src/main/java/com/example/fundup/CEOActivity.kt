@@ -182,7 +182,7 @@ class CEOActivity : AppCompatActivity() {
                         ).show()
                     }
 
-                val intent = Intent(this, LoadingActivity::class.java)
+                val intent = Intent(this, LoadingStartup::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
                 finish()
