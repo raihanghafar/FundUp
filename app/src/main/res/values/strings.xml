@@ -60,4 +60,24 @@
         <item>Startup yang memiliki dampak, namun tetap memperhatikan risk and return</item>
         <item>Startup yang memiliki risk and return yang baik</item>
     </string-array>
+    <string name="search">search</string>
+    <string name="chat">Chat</string>
+    <string name="akun">Akun</string>
+    <string name="home">Home</string>
+    <string name="searchT">Search</string>
+    <string name="start_up">fundup Start up</string>
+    <string name="description">merupakan start up bergerak dalam bidang investasi</string>
+    <string name="email">Joko@gmail.com</string>
+    <string name="growth">Meningkat atau tidak</string>
+    <string name="type">Tipe Investor</string>
+    <string name="nama">Joko</string>
+    <string name="distribusi">Digital</string>
+    <string name="jenis">private or Public</string>
+    <string name="pengalaman">pengalaman Investor</string>
+    <string name="tlfon">No Telfon</string>
+    <string name="target">target investor</string>
+    <string name="name_startup">Binar Academy</string>
+    <string name="industri">Bisnis</string>
+    <string name="target_startup">Target Perusahaan</string>
+    <string name="perkembangan">Tingkat Perkembangan</string>
 </resources>
